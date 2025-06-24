@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BWC Navbar</title>
+  <style>
+    body {
+      background-color: #aef3f4;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .navbar {
+      background-color: #006666;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      margin-bottom: 40px;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-left span,
+    .nav-right span {
+      color: white;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .nav-left a,
+    .nav-right a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .contact-button {
+      background-color: white;
+      border: 2px solid #006666;
+      color: #006666;
+      padding: 5px 10px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar 1 -->
+  <div class="navbar">
+    <div class="nav-left">
+      <span>B W C</span>
+    </div>
+    <div class="nav-right">
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">SERVICES</a>
+      <a href="#" class="contact-button">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Navbar 2 -->
+  <div class="navbar">
+    <div class="nav-left">
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">SERVICES</a>
+      <a href="#" class="contact-button">CONTACT</a>
+    </div>
+    <div class="nav-right">
+      <span>B W C</span>
+      
+    </div>
+  </div>
+
+  <!-- Navbar 3 -->
+  <div class="navbar">
+    <div class="nav-left">
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">SERVICES</a>
+    </div>
+    <span style="color: white; font-weight: bold;">B W C</span>
+    <a href="#" class="contact-button">CONTACT</a>
+  </div>
+
+</body>
+</html>
