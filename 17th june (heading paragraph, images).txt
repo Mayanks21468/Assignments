@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <h1>My Favorite Hobby is Playing BGMI </h1>    
+    <b></b>
+    <p style="margin-bottom: 20px;">Playing <b>BGMI (Battlegrounds Mobile India)</b> as a hobby is an exciting and engaging way to spend leisure time. It not only provides entertainment but also helps in improving strategic thinking, reflexes, and teamwork skills. As a multiplayer battle royale game, BGMI allows players to connect with friends or strangers and work together to achieve victory, promoting communication and coordination. For many young people, it has become a popular digital hobby that brings thrill, competition, and social interaction. While it’s important to play in moderation, BGMI can be a fun way to unwind, relieve stress, and enjoy virtual adventures in different maps and modes.
+    </p> 
+
+<img src="https://st1.techlusive.in/wp-content/uploads/2024/10/BGMI-Parkour-Challenge.jpg?impolicy=Medium_Widthonly&w=900" alt="Battlegrounds" width="500" height="400" > 
+<p><br> <br> <br> <br> <br> <br> <br></p>
+
+
+<h1 align="left">Dr. A.P.J. Abdul Kalam</h1> 
+
+  <div align="center">
+    <img src="https://cdn.britannica.com/56/148856-004-2F59E2D9/APJ-2008.jpg" width="300" alt="A.P.J. Abdul Kalam">
+  </div>
+
+  <h2>Early Life</h2>
+  <p align="left">
+    <b><u>Dr. Avul Pakir Jainulabdeen Abdul Kalam</u></b> was born on <b>15 October 1931</b> in the small town of <i>Rameswaram</i> in <u>Tamil Nadu</u>. He belonged to a modest family, and his father was a boat owner. Despite facing financial hardships, Kalam was a bright and hardworking student. He sold newspapers to support his family but never gave up on his education. His strong interest in mathematics and physics led him to pursue aerospace engineering at the Madras Institute of Technology.
+  </p>
+
+  <h2>Achievements</h2>
+  <p align="left">
+    After completing his studies, Dr. Kalam joined the <b>Defence Research and Development Organisation (DRDO)</b> and later <b>ISRO</b>, where he became the Project Director of India's first satellite launch vehicle (SLV-III). He played a key role in the development of India's <i>missile technology</i> and was popularly known as the <u>"Missile Man of India"</u>. His contributions to the <b>Pokhran-II nuclear tests</b> in 1998 marked a historic moment for the country. He was honored with many awards, including the <b>Bharat Ratna</b>, India's highest civilian award.
+  </p>
+
+  <h2>Presidency and Legacy</h2>
+  <p align="left">
+    In <b>2002</b>, Dr. A.P.J. Abdul Kalam became the <u>11th President of India</u>. Known as the <i>"People’s President"</i>, he was admired for his simplicity, dedication, and deep love for students. Even after his presidency, he continued to travel across India to teach and inspire young minds. He believed in dreaming big and working hard to achieve one’s goals. His autobiography, <b><i>"Wings of Fire"</i></b>, is a source of motivation for millions. He passed away on <u>27 July 2015</u> while delivering a lecture at IIM Shillong, doing what he loved the most — teaching.
+  </p>
+
+  <h2>Know More</h2>
+  <p align="left">
+    If you wish to learn more about this great personality, visit his official <a href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam" target="_blank"><b>Wikipedia page</b></a> which contains detailed information about his life and works.
+  </p>
+  <h1>
+    My Daily Routine </h1>
+ <div align="center">
+     <img src="https://t4.ftcdn.net/jpg/01/21/53/03/240_F_121530389_e7pLxfBV8iVjN9keggGFC6NlqrmIiJMC.jpg" width="400" alt="Clock Image">
+ </div>
+  
+  <h2>Morning</h2>
+  <p>
+    My day usually begins at <b>6:30 AM</b>. I start with brushing my teeth and doing a few minutes of <i>meditation</i> to feel fresh and focused. After that, I go for a short <u>morning walk</u> or light exercise. Around <b>7:30 AM</b>, I take a bath and get ready for college. I eat a healthy breakfast which usually includes fruits and milk. By <i>9:00 AM</i>, I leave for my classes.
+  </p>
+
+  <h2>Afternoon</h2>
+  <p>
+    My college classes usually go on till <b>3:40 PM</b>. During lunch break, I eat my tiffin and relax with friends. After college, I return home by <i>4:00 PM</i>. I then take some rest and have a light snack. I also check any <u>homework or assignments</u> I have and sometimes revise what was taught during the day. If I get free time, I watch a few videos related to coding or tech on <a href="https://www.youtube.com/" target="_blank"><b>YouTube</b></a>.
+  </p>
+
+  <h2>Evening</h2>
+  <p>
+    In the evening, I spend some time playing games like <i>BGMI</i> or talking with friends. I also dedicate at least an hour to studying or practicing <b>DSA</b> or other important subjects. At around <u>8:30 PM</u>, I have my dinner with my family. After that, I usually relax, scroll a bit on social media, or read a book. I try to sleep by <b>11:00 PM</b> to stay fresh for the next day.
+  </p>
+ 
+  
+</body>
+</html>
