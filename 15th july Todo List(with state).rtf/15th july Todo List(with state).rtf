@@ -1,1 +1,40 @@
+import React, { useState } from 'react';
+
+const SimpleTodoList = () => {
+  const [input, setInput] = useState('');
+  const [todos, setTodos] = useState([]);
+
+  const handleAdd = () => {
+    if (input.trim() !== '') {
+      setTodos([...todos, input]);
+      setInput('');
+    }
+  };
+
+  return (
+    <div style={{ padding: '20px', fontFamily: 'Arial', maxWidth: '400px', margin: '0 auto' }}>
+      <h2>Simple To-Do List</h2>
+      <input
+        type="text"
+        value={input}
+        placeholder="Enter a to-do item"
+        onChange={(e) => setInput(e.target.value)}
+        style={{ padding: '8px', width: '70%', marginRight: '10px' }}
+      />
+      <button onClick={handleAdd} style={{ padding: '8px 12px' }}>
+        Add
+      </button>
+
+      <ul style={{ marginTop: '20px' }}>
+        {todos.map((todo, index) => (
+          <li key={index} style={{ fontSize: '16px', marginBottom: '6px' }}>
+            • {todo}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default SimpleTodoList;
 
