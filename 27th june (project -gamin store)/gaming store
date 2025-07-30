@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cyborg Gaming</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1f2122;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #27292a;
+  padding: 15px 30px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links .active {
+  color: #ec6090;
+}
+
+.banner {
+  background-image: url('https://wallpaperaccess.com/full/329583.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 30px;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.banner em {
+  color: #ec6090;
+}
+
+.popular {
+  padding: 40px 30px;
+  background: #202124;
+}
+
+.popular h2 {
+  margin-bottom: 20px;
+}
+
+.games {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.game-card {
+  background: #2a2a2a;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.game-card:hover {
+  background: #ec6090;
+}
+
+.library {
+  padding: 40px 30px;
+  background: #27292a;
+}
+
+.library-list {
+  list-style: none;
+  padding: 0;
+}
+
+.library-list li {
+  background: #1f1f1f;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a1a1a;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <img src="https://static.vecteezy.com/system/resources/previews/009/682/263/non_2x/cyborg-mascot-logo-design-vector.jpg" alt="Cyborg Logo" class="logo">
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Browse</a></li>
+        <li><a href="#">Details</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Welcome to <em>Cyborg</em></h1>
+      <p>Your Ultimate Gaming Portal</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-XWpJLkXQkCJaSbse8VgmUO415AgdOpbY8A&s" alt="gaming portal">
+    </div>
+  </section>
+
+  <!-- Most Popular Games -->
+  <section class="popular">
+    <h2>Most Popular Right Now</h2>
+    <div class="games">
+      <div class="game-card">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg" alt="CS:GO">
+        <h3>CS:GO</h3>
+        <p>Action</p>
+      </div>
+      <div class="game-card">
+        <img src="https://thumbs.dreamstime.com/b/fortnite-logo-fortnite-logo-white-background-vector-format-available-ai-134361240.jpg" alt="Fortnite">
+        <h3>Fortnite</h3>
+        <p>Battle Royale</p>
+      </div>
+      <div class="game-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiZXk-0BkGlF1Z_IgoJk5TeNjlDtOFeY8enQ&s" alt="PUBG">
+        <h3>PUBG</h3>
+        <p>Shooter</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gaming Library -->
+  <section class="library">
+    <h2>Your Gaming Library</h2>
+    <ul class="library-list">
+      <li><strong>Game:</strong> CS:GO <span>Status: Playing</span></li>
+      <li><strong>Game:</strong> Fortnite <span>Status: Completed</span></li>
+      <li><strong>Game:</strong> PUBG <span>Status: Paused</span></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Cyborg Gaming | Made with ❤️ using HTML & CSS</p>
+  </footer>
+
+</body>
+</html>
