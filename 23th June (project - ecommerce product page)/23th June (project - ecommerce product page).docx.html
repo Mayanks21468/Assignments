@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zay Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f8f9fa;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul {
+      list-style: none;
+    }
+    header.top-bar {
+      background: #212934;
+      color: #ccc;
+      font-size: 14px;
+      padding: 10px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-left span {
+      margin-right: 15px;
+    }
+    .top-right a {
+      color: #ccc;
+      margin-left: 15px;
+    }
+    nav {
+      background: #fff;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #59ab6e;
+    }
+    nav ul {
+      display: flex;
+      gap: 30px;
+      font-weight: 500;
+    }
+    nav .icons a {
+      margin-left: 15px;
+      font-size: 16px;
+      color: #333;
+    }
+    .hero {
+      background: #efefef;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 100px;
+      position: relative;
+    }
+    .hero-text {
+      max-width: 50%;
+    }
+    .hero-text h2 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .hero-text p {
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .hero-image img {
+      width: 250px;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: #999;
+      cursor: pointer;
+    }
+    .arrow.left { left: 20px; }
+    .arrow.right { right: 20px; }
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .dots span {
+      height: 10px;
+      width: 10px;
+      background: #ccc;
+      display: inline-block;
+      border-radius: 50%;
+      margin: 5px;
+    }
+    .dots span.active {
+      background: #59ab6e;
+    }
+    .section {
+      padding: 60px 50px;
+      background: #fff;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .section p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .categories, .products {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .category {
+      width: 200px;
+    }
+    .category img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .category h3 {
+      margin: 15px 0 5px;
+    }
+    .category button {
+      background: #59ab6e;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+    }
+    .product {
+      background: #f1f1f1;
+      padding: 20px;
+      width: 250px;
+      text-align: left;
+    } 
+    .product:hover {
+  background-color: #a6ddb9;
+  transition: 0.3s ease;
+} 
+.featured-products {
+  background-color: rgb(219, 226, 234); 
+  padding: 60px 50px;
+  text-align: center;
+}
+
+
+    .product img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .product .stars {
+      color: gold;
+      font-size: 14px;
+    }
+    .product .price {
+      float: right;
+      font-weight: bold;
+      color: #888;
+    }
+    footer {
+      background: #212934;
+      color: #ccc;
+      padding: 40px 30px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .footer-col {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+    footer h3 {
+      color: #59ab6e;
+      margin-bottom: 15px;
+    }
+    footer ul li {
+      margin-bottom: 8px;
+    }
+    footer input[type="email"] {
+      padding: 8px;
+      margin-right: 5px;
+      border-radius: 4px;
+      border: none;
+    }
+    footer button {
+      padding: 8px 12px;
+      background: #59ab6e;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    .copyright {
+      background: #1d252c;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      font-size: 13px;
+
+    }
+    .social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* white color on dark bg */
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="top-left">
+      <span>📧 info@company.com</span>
+      <span>📞 010-020-0340</span>
+    </div>
+   <div class="social-icons">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook"></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram"></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="LinkedIn"></a>
+    </div>
+  </header>
+
+  <nav>
+    <div class="logo">Zay</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  <div class="top-right">
+      <a href="#">🌐</a>
+      <a href="#">🔍</a>
+      <a href="#">👤</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <span class="arrow left">❮</span>
+    <div class="hero-text">
+      <h2>Proident occaecat</h2>
+      <p>Aliquip ex ea commodo consequat</p>
+      <p>You are permitted to use this Zay CSS template for your commercial websites. You are <strong>not permitted</strong> to re-distribute the template ZIP file in any kind of template collection websites.</p>
+    </div>
+    <div class="hero-image">
+      <img src="banner_img_02.jpg" alt="Product">
+    </div>
+    <span class="arrow right">❯</span>
+  </div>
+  <div class="dots">
+    <span class="active"></span>
+    <span></span>
+  </div>
+ <section class="section">
+    <h2>Categories of The Month</h2>
+    <p>Exceptetur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="categories">
+  
+      <div class="category">
+        <img src="category_img_01.jpg" alt="Watches">
+        <h3>Watches</h3>
+        <button>Go Shop</button>
+      </div>
+      <div class="category">
+        <img src="category_img_02.jpg" alt="Shoes">
+        <h3>Shoes</h3>
+        <button>Go Shop</button>
+      </div>
+      <div class="category">
+        <img src="category_img_03.jpg" alt="Accessories">
+        <h3>Accessories</h3>
+        <button>Go Shop</button>
+      </div>
+    </div>
+  </section>
+
+ <section class="featured-products">
+  <h2>Featured Product</h2>
+  <br>
+  <p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><br>
+  <div class="products">
+  
+
+      <div class="product">
+        <img src="feature_prod_01.jpg" alt="Gym Weight" height="200">
+        <div class="stars">⭐⭐⭐⭐ <span class="price">$240.00</span></div>
+        <h3>Gym Weight</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sunt in culpa qui officia deserunt.</p>
+        <p>Reviews (24)</p>
+      </div>
+      <div class="product">
+        <img src="feature_prod_02.jpg" alt="Cloud Nike Shoes" height="200">
+        <div class="stars">⭐⭐⭐⭐ <span class="price">$480.00</span></div>
+        <h3>Cloud Nike Shoes</h3>
+        <p>Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed.</p>
+        <p>Reviews (48)</p>
+      </div>
+      <div class="product">
+        <img src="feature_prod_03.jpg" alt="Summer Addides Shoes" height="200">
+        <div class="stars">⭐⭐⭐⭐⭐ <span class="price">$360.00</span></div>
+        <h3>Summer Addides Shoes</h3>
+        <p>Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam.</p>
+        <p>Reviews (74)</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+  <div class="footer-col">
+    <h3>Zay Shop</h3>
+    <ul>
+      <li>📍 123 Consectetur at ligula 10660</li>
+      <li>📞 010-020-0340</li>
+      <li>✉️ info@company.com</li>
+    </ul>
+    <div class="social-icons">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook"></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram"></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="LinkedIn"></a>
+    </div>
+  </div>
+
+  <div class="footer-col">
+    <h3>Products</h3>
+    <ul>
+      <li>Luxury</li>
+      <li>Sport Wear</li>
+      <li>Men's Shoes</li>
+      <li>Women's Shoes</li>
+      <li>Popular Dress</li>
+      <li>Gym Accessories</li>
+      <li>Sport Shoes</li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h3>Further Info</h3>
+    <ul>
+      <li>Home</li>
+      <li>About Us</li>
+      <li>Shop Locations</li>
+      <li>FAQs</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h3>Newsletter</h3>
+    <input type="email" placeholder="Email address">
+    <button>Subscribe</button>
+  </div>
+</footer>
+
+  <div class="copyright">
+    &copy; 2021 Company Name | Designed by TemplateMo
+  </div>
+</body>
+</html>
