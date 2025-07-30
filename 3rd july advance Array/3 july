@@ -1,0 +1,124 @@
+// 1. Flatten deeply nested array
+function flatten(arr) {
+  return arr.reduce((acc, val) =>
+    Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val), []);
+}
+console.log("1:", flatten([1, [2, [3, [4]], 5]))); // [1,2,3,4,5]
+
+// 2. Remove duplicates without Set
+function removeDuplicates(arr) {
+  const result = [];
+  for (let i of arr) {
+    if (!result.includes(i)) result.push(i);
+  }
+  return result;
+}
+console.log("2:", removeDuplicates([1, 2, 2, 3, 1])); // [1,2,3]
+
+// 3. Shared reference
+const a = [1, 2, 3];
+const b = a;
+b.push(4);
+console.log("3:", a); // [1,2,3,4]
+
+// 4. Second largest without sorting
+function secondLargest(arr) {
+  let max = -Infinity, second = -Infinity;
+  for (let num of arr) {
+    if (num > max) {
+      second = max;
+      max = num;
+    } else if (num > second && num < max) {
+      second = num;
+    }
+  }
+  return second;
+}
+console.log("4:", secondLargest([10, 5, 8, 1, 9])); // 9
+
+// 5. Count occurrences
+function countOccurrences(arr) {
+  return arr.reduce((acc, val) => {
+    acc[val] = (acc[val] || 0) + 1;
+    return acc;
+  }, {});
+}
+console.log("5:", countOccurrences([1, 2, 2, 3, 1, 1])); // {1: 3, 2: 2, 3: 1}
+
+// 6. Polyfill for map
+Array.prototype.myMap = function(callback) {
+  const result = [];
+  for (let i = 0; i < this.length; i++) {
+    result.push(callback(this[i], i, this));
+  }
+  return result;
+};
+console.log("6:", [1, 2, 3].myMap(x => x * 2)); // [2, 4, 6]
+
+// 7. Sort by name, then age
+const people = [
+  { name: "John", age: 30 },
+  { name: "Alice", age: 25 },
+  { name: "John", age: 22 }
+];
+people.sort((a, b) => a.name === b.name ? a.age - b.age : a.name.localeCompare(b.name));
+console.log("7:", people);
+
+// 8. Prime filter
+function isPrime(n) {
+  if (n < 2) return false;
+  for (let i = 2; i <= Math.sqrt(n); i++)
+    if (n % i === 0) return false;
+  return true;
+}
+console.log("8:", [1, 2, 3, 4, 5, 6].filter(isPrime)); // [2,3,5]
+
+// 9. Length = 0
+const arr = [1, 2, 3];
+arr.length = 0;
+console.log("9:", arr[0]); // undefined
+
+// 10. forEach vs map - example
+const example = [1, 2, 3];
+const mapped = example.map(x => x * 2); // returns new array
+let forEachResult = [];
+example.forEach(x => forEachResult.push(x * 2)); // modifies existing
+console.log("10:", mapped, forEachResult); // both same values, but map returns array
+
+// 11. slice copy vs original
+const a2 = [1, 2, 3];
+const b2 = a2.slice(0, 2);
+b2[0] = 100;
+console.log("11:", a2); // [1,2,3]
+
+// 12. All pairs with target sum
+function findPairs(arr, target) {
+  const result = [];
+  const seen = new Set();
+  for (let num of arr) {
+    const complement = target - num;
+    if (seen.has(complement)) {
+      result.push([complement, num]);
+    }
+    seen.add(num);
+  }
+  return result;
+}
+console.log("12:", findPairs([1, 2, 3, 4, 5], 6)); // [[2,4],[1,5]]
+
+// 13. Chunk array
+function chunkArray(arr, size) {
+  const result = [];
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
+}
+console.log("13:", chunkArray([1,2,3,4,5,6], 2)); // [[1,2], [3,4], [5,6]]
+
+// 14. Reduce sum
+const sum = [1, 2, 3, 4].reduce((acc, curr) => acc + curr, 0);
+console.log("14:", sum); // 10
+
+// 15. splice time complexity explanation
+console.log("15: splice() has O(n) complexity in worst case because shifting elements after the index may require moving all remaining elements.");
